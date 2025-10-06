@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nested Subjects — Homepage</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Explore Subjects</h1>
+        <p class="subtitle">Click a subject to reveal topics. Tap a topic to open its dedicated page.</p>
+      </div>
+    </header>
+
+    <section class="grid" id="subjectsGrid">
+      <!-- Subjects will be injected by script.js for cleaner structure -->
+    </section>
+
+    <footer>
+      <p>© Your Site — Multi-page nested navigation demo.</p>
+    </footer>
+  </div>
+  <script>
+    // Subject/topic data mirrors the folder structure in /topics
+    const DATA = {
+      "Mathematics": ["Algebra", "Geometry", "Calculus", "Statistics"],
+      "Science": ["Physics", "Chemistry", "Biology", "Astronomy"],
+      "History": ["Ancient History", "Medieval History", "Modern History", "U.S. History"]
+    };
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
