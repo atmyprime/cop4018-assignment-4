@@ -1,0 +1,69 @@
+
+/* Base Reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #111827; background: #f8fafc; }
+
+/* Layout */
+.container { max-width: 960px; margin: 0 auto; padding: 1.25rem; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+h1, h2, h3 { margin: 0.25rem 0 0.75rem; }
+.subtitle { color: #475569; margin-bottom: 1rem; }
+
+/* Card styles */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+
+.card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 1rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.card p { color: #475569; margin: 0.25rem 0 0.75rem; }
+
+/* Subject button */
+.subject-btn {
+  width: 100%;
+  text-align: left;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.05s ease, opacity 0.15s ease;
+}
+.subject-btn:active { transform: translateY(1px); opacity: 0.95; }
+.subject-btn:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+
+/* Topic list */
+.topic-list { list-style: none; padding: 0.5rem 0 0 0; margin: 0; display: none; }
+.topic-list.show { display: block; }
+.topic-list li { margin: 0.35rem 0; }
+.topic-link {
+  display: inline-block;
+  background: #f1f5f9;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+}
+.topic-link:hover { background: #e2e8f0; }
+
+/* Back button on topic pages */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #0ea5e9;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+}
+.back:focus-visible { outline: 3px solid #93c5fd; outline-offset: 2px; }
+.back:hover { filter: brightness(0.98); }
+
+/* Footer */
+footer { margin-top: 2rem; color: #64748b; font-size: 0.9rem; }
